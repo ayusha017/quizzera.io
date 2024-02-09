@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="veiwport" content="width=device-width,initial-scale=1.0"> 
+    <title>Quizzera</title>
+    <link rel="icon" href="C:\Users\LENOVO\Desktop\web development\images\A-removebg-preview(1)" type="image/x-icon">
+    <link rel="Stylesheet" href="StyleSheet.css">
+    <script>
+        function onClickMenu(){
+            document.getElementById("menu").classList.toggle("icon");
+            document.getElementById("nav").classList.toggle("change");
+        }
+    </script>
+</head>
+<body>
+        
+        <div id="nav">
+            <div class="topnav" id="menu" onclick="onClickMenu()">
+                <div class="bar" id="bar1"></div><div class="bar" id="bar2"></div><div class="bar" id="bar3"></div>
+            </div>
+            <div class="nav" id="nav1">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#popup">Rules</a></li>
+            </ul>
+            </div>
+        </div>    
+    <div id="popup" class="modal">
+        <div class="content">
+            <h1 style="color: rgb(21, 177, 21);">Instructions</h1>
+            <b>
+                <ul>
+                    <li>There are five questions in each category.</li>
+                    <li>There is a timer set on the top-right side of the screen that shows the time.</li>
+                    <li>No time limit.</li>
+                    <li>Donot reload or try to go back else progress will be lost</li>
+                    <li>Score will be evaluated at the end.</li>
+                    <li>All the best!!!</li>
+                </ul>
+                <button class="continue"><a href="quiztypes.html">Continue</a></button>
+            </b>
+            <a href="#" class="box-close">x</a>
+        </div>
+    </div>
+    <div class="quizcontent">
+        <span><i style="color:yellow;">Q</i>UIZZERA </span>
+        <div class="quizname">
+            <button class="btn"><img src="hq720.jpg" height="150px" width="220px"><br><a href="tech.html">TECHNICAL QUIZ</a></button>
+            <button class="btn"><img src="fun.jpg" height="150px" width="220px"><br><a href="fun.html">FUN QUIZ</a></button>
+            <button class="btn"><img src="coding.jpg" height="150px" width="220px"><br><a href="coding.html">PROGRAMMING LANGUAGE</a></button>
+            
+            <button class="btn"><img src="gk.jpeg" height="150px" width="220px"><br><a href="gk.html">GK QUIZ</a></button>
+            <button class="btn"><img src="sports.jpg" height="150px" width="220px"><br><a href="sports.html">SPORTS QUIZ</a></button>
+            <button class="btn"><img src="logical.jpeg" height="150px" width="220px"><br><a href="reasoning.html">REASONING QUIZ</a></button>
+        </div>
+    </div>
+</body>
+</html>
+     
+</body>
+</html>
