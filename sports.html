@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="veiwport" content="width=device-width,initial-scale=1.0"> 
+    <title>Quizzera</title>
+    <link rel="icon" href="C:\Users\LENOVO\Desktop\web development\images\A-removebg-preview(1)" type="image/x-icon">
+    <link rel="Stylesheet" href="StyleSheet.css">
+    <script>
+        function onClickMenu(){
+            document.getElementById("menu").classList.toggle("icon");
+            document.getElementById("nav").classList.toggle("change");
+        }
+
+    </script>
+</head>
+<body>
+        
+        <div id="nav">
+            <div class="topnav" id="menu" onclick="onClickMenu()">
+                <div class="bar" id="bar1"></div><div class="bar" id="bar2"></div><div class="bar" id="bar3"></div>
+            </div>
+            <div class="nav" id="nav1">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#popup">Rules</a></li>
+            </ul>
+            </div>
+        </div>    
+    <div class="quizcontent">
+        <span><i style="color:#ff6700;">Q</i>UIZZERA </span>
+        <div id="tech" class="quizpopup">
+            <h1>SPORTS QUIZ</h1>
+            <div class="quiz">
+                <h3 class="question" id="question">Football player Maradona belongs to??</h3>
+                <div class="answer" id="answer">
+                    <button class="ans" >Brazil <input type="radio" name="q1" ></button>
+                    <button class="ans" >China <input type="radio" name="q1" ></button>
+                    <button class="ans">Argentina <input type="radio" name="q1" id="true1"></button>
+                    <button class="ans">Italy <input type="radio" name="q1"></button>
+                </div>
+                <h3 class="question" id="question">Who captained India to its first ever Cricket World Cup?</h3>
+                <div class="answer" id="answer">
+                    <button class="ans" >Kapil Dev <input type="radio" name="q2" id="true2"></button>
+                    <button class="ans" >Sunil Gavaskar <input type="radio" name="q2" ></button>
+                    <button class="ans">Sachin Tendulkar <input type="radio" name="q2"></button>
+                    <button class="ans">Sourav Gangully<input type="radio" name="q2"></button>
+                </div>
+                <h3 class="question" id="question">Which badminton player is the first Indian to win an Olympic medal in the sport? </h3>
+                <div class="answer" id="answer">
+                    <button class="ans" >Kidambi Srikanth<input type="radio" name="q3"></button>
+                    <button class="ans">PV Sindhu<input type="radio" name="q3" ></button>
+                    <button class="ans">Saina Nehwal<input type="radio" name="q3" id="true3"></button>
+                    <button class="ans">Prakash Padukone<input type="radio" name="q3"></button>
+                </div>
+                <h3 class="question" id="question">Who is Flying Sikh?</h3>
+                <div class="answer" id="answer">
+                    <button class="ans" >PT Usha <input type="radio" name="q4" ></button>
+                    <button class="ans" >Manoj Tiwari<input type="radio" name="q4" ></button>
+                    <button class="ans">Neeraj Chopra <input type="radio" name="q4"></button>
+                    <button class="ans" >Milkha Singh<input type="radio" name="q4" id="true4"></button>
+                </div>
+                <h3 class="question" id="question">National Sports Day is celebrated in India on ?</h3>
+                <div class="answer" id="answer">
+                    <button class="ans">28 Aug<input type="radio" name="q5" ></button>
+                    <button class="ans" >29 Aug<input type="radio" name="q5" id="true5"></button>
+                    <button class="ans" >30 Aug<input type="radio" name="q5" ></button>
+                    <button class="ans">27 Aug<input type="radio" name="q5"></button>
+                </div>
+                <button id="next-btn" onclick="result()">Next</button>
+            </div>
+            <div id="scorepopup"><div id="score"></div></div>
+            
+        </div>
+    </div>
+    <div id="popup" class="modal">
+        <div class="content">
+            <h1 style="color: rgb(21, 177, 21);">Instructions</h1>
+            <b>
+                <ul>
+                    <li>There are five questions in each category.</li>
+                    <li>There is a timer set on the top-right side of the screen that shows the time.</li>
+                    <li>No time limit.</li>
+                    <li>Donot reload or try to go back else progress will be lost</li>
+                    <li>Score will be evaluated at the end.</li>
+                    <li>All the best!!!</li>
+                </ul>
+                <button class="continue"><a href="#">Continue</a></button>
+            </b>
+            <a href="#" class="box-close">x</a>
+        </div>
+    </div>
+    <script>
+        function result(){
+            let score=0;
+            if(document.getElementById('true1').checked)
+            {
+                score++;
+            }
+            if(document.getElementById('true2').checked)
+            {
+                score++;
+            }
+            if(document.getElementById('true3').checked)
+            {
+                score++;
+            }
+            if(document.getElementById('true4').checked)
+            {
+                score++;
+            }
+            if(document.getElementById('true5').checked)
+            {
+                score++;
+            }
+            if(confirm("Your score is : "+score)){
+                window.location.href='index.html';
+            }
+        }
+        
+            window.onbeforeunload=function(){
+                return confirm("Progress will be lost!!");
+            }
+
+
+    </script>
+</body>
+</html>
